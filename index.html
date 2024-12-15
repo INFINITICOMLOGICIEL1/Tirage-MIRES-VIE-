@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tirage de Verset Biblique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ecef;
+            color: #343a40;
+            text-align: center;
+            padding: 50px;
+        }
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+        #header img {
+            width: 100px; /* Ajustez la taille de l'image selon vos besoins */
+            height: auto;
+            margin-right: 20px;
+        }
+        h1 {
+            color: red;
+            font-size: 36px;
+            margin: 0;
+        }
+        #verse {
+            font-size: 24px;
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+                                            <h1>     
+
+    <div id="verse">Cliquez sur le bouton pour obtenir votre verset biblique!</div>
+    <button onclick="generateVerse()">Tirage</button>
+
+    <script>
+        const verses = [
+            "Genèse 1:1 - Au commencement, Dieu créa les cieux et la terre.",
+            "Psaume 23:1 - L'Éternel est mon berger: je ne manquerai de rien.",
+            "Proverbes 3:5 - Confie-toi en l'Éternel de tout ton cœur, et ne t'appuie pas sur ta sagesse.",
+            "Matthieu 6:33 - Cherchez d'abord le royaume et la justice de Dieu; et toutes ces choses vous seront données par-dessus.",
+            "Jean 3:16 - Car Dieu a tant aimé le monde qu'il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu'il ait la vie éternelle.",
+            "Philippiens 4:13 - Je puis tout par celui qui me fortifie.",
+            "Révélation 21:4 - Il essuiera toute larme de leurs yeux; et la mort ne sera plus, et il n'y aura plus ni deuil, ni cri, ni douleur, car les premières choses ont disparu."
+        ];
+
+        function generateVerse() {
+            const randomIndex = Math.floor(Math.random() * verses.length);
+            document.getElementById('verse').innerText = verses[randomIndex];
+        }
+    </script>
+</body>
+</html>
